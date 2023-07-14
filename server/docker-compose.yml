@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:latest
+    ports:
+      - 3333:3306
+    volumes:
+      - /path/to/mysql:/var/lib/mysql
+
+  pbc:
+    image: phonebook-client
+    ports:
+      - 3000:3000
+    
+  pbs:
+    image: phonebook-server
+    ports:
+      - 3001:3001
